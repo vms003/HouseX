@@ -1,0 +1,1751 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+:root{
+   --main-color:#DA2C32;
+   --light-color:#666;
+   --light-bg:#eee;
+   --white:#fff;
+   --black:#303030;
+   --border:.1rem solid var(--light-color);
+   --box-shodow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Montserrat', sans-serif;
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   outline: none; border: none;
+   text-decoration: none;
+}
+
+*::selection{
+   background-color: var(--main-color);
+   color: var(--white);
+}
+
+*::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: var(--main-color);
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 10rem;
+}
+
+body{
+   background-color: var(--light-bg);
+}
+
+section{
+   padding: 3rem 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.heading{
+   text-align: center;
+   padding-bottom: 2.5rem;
+   font-size: 3rem;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.empty{
+   width: 100%;
+   background-color: var(--white);
+   padding: 1.5rem;
+   text-align: center;
+   font-size: 2rem;
+   color: var(--black);
+}
+
+.btn,
+.inline-btn{
+   margin-top: 1rem;
+   padding: 1rem 3rem;
+   background-color: var(--main-color);
+   color: var(--white);
+   cursor: pointer;
+   text-align: center;
+   font-size: 1.8rem;
+   text-transform: capitalize;
+}
+
+.btn:hover,
+.inline-btn:hover{
+   background-color: var(--black);
+}
+
+.btn{
+   display: block;
+   width: 100%;
+}
+
+.inline-btn{
+   display: inline-block;
+}
+
+.flex-btn{
+   display: flex;
+   gap: 1rem;
+   justify-content: space-between;
+   align-items: flex-end;
+}
+
+/* Menu Button Styles */
+.menu-btn {
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   cursor: pointer;
+   z-index: 1000;
+   color: black;
+   display: none; /* Hide by default on larger screens */
+}
+
+/* Show menu button on small screens */
+@media (max-width: 768px) {
+   .menu-btn {
+      display: block;
+   }
+}
+/* Improved Menu Button Style */
+
+
+.bar {
+   width: 25px;
+   height: 3px;
+   background-color: #333;
+   margin: 5px 0;
+   transition: background-color 0.3s ease;
+}
+
+/* Add animation on hover for bars */
+.bar:hover {
+   background-color: #ff6600;
+}
+
+/* Active state for menu button */
+.menu-btn.active .bar:nth-child(1) {
+   transform: translateY(6px) rotate(45deg);
+}
+
+.menu-btn.active .bar:nth-child(2) {
+   opacity: 0;
+}
+
+.menu-btn.active .bar:nth-child(3) {
+   transform: translateY(-6px) rotate(-45deg);
+}
+
+
+
+
+
+
+
+body {
+   margin: 0;
+   font-family: 'Champagne Sorbet', cursive;
+}
+
+/* Header Styles */
+.header {
+   position: sticky;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   background-color: #fff; /* Background color for the header */
+}
+.navbar .menu{
+   margin-left: 200px;
+}
+/* Navbar Styles */
+.navbar {
+   background: linear-gradient(90deg, #1a1a1a 0%, #333 100%); /* Gradient background for the navbar */
+   padding: 1rem 0;
+}
+
+.navbar .flex {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 2rem; /* Adjust horizontal padding */
+}
+
+.navbar .logo {
+   text-decoration: none;
+   color: #ff6600;
+   font-size: 2rem;
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+}
+
+.navbar .logo img {
+   width: 40px; /* Adjust the size as needed */
+   margin-right: 10px;
+   border-radius: 50%; /* Rounded logo image */
+   background-color: #ff6600; /* Logo background color */
+   padding: 5px; /* Padding for the logo */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Logo box shadow */
+   transition: transform 0.3s ease; /* Logo scale transition */
+}
+
+.navbar .logo img:hover {
+   transform: scale(1.1); /* Hover scale effect */
+}
+
+.navbar ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+.navbar ul li {
+   position: relative;
+   margin-right: 0px; /* Adjust the spacing between menu items */
+
+}
+
+.navbar ul li:last-child {
+   margin-right: 0;
+}
+
+.navbar ul li a {
+   font-size: 1.6rem;
+   text-decoration: none;
+   color: #fff;
+   transition: color 0.3s ease;
+   padding: 10px 20px;
+   /* display: inline-flex; */
+   display: flex;
+   align-items: center; /* Center vertically within the navbar */
+}
+
+.navbar ul li a i {
+   margin-right: 9px;
+   
+}
+
+
+.navbar ul li a:hover {
+   color: #ff6600; /* Hover color */
+   background-color: #1a1a1a; /* Background color on hover */
+   border-bottom: 2px solid #ff6600; /* Highlight the bottom border on hover */
+}
+
+/* Add this CSS for dropdown visibility */
+.navbar ul li .submenu {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   background-color: #1a1a1a; /* Dark background for dropdown menu */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
+   z-index: 100;
+   width: 220px; /* Adjust the dropdown width */
+   border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+}
+
+.navbar ul li:hover .submenu {
+   top: 100%;
+   opacity: 1;
+   visibility: visible;
+}
+.n1{
+   margin-top: 8px;
+   display: flex;
+}
+.n2{
+   display:contents;
+}
+/* .dropdown-toggle::after {
+   content: '\f107';
+   font-family: 'Font Awesome 5 Free';
+   font-weight: 900;
+   margin-left: 5px;
+   transition: transform 0.3s ease; Smooth rotation transition
+} */
+
+.dropdown-toggle.active::after {
+   transform: rotate(180deg); /* Rotate on hover */
+}
+
+/* Style the dropdown menus for both large and small screens */
+.submenu {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   background-color: #1a1a1a; /* Dark background for dropdown menu */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
+   z-index: 100;
+   width: 220px; /* Adjust the dropdown width */
+   border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+   display: flex;
+   flex-direction: column; /* Display items in a single column */
+   align-items: flex-start; /* Align items to the left */
+   padding: 10px 0; /* Add some padding */
+}
+
+.submenu ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.submenu ul li {
+   padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.submenu ul li a {
+   font-size: 1.4rem;
+   color: #fff; /* Text color for dropdown items */
+   text-decoration: none;
+   display: block;
+   transition: color 0.3s ease;
+}
+
+.submenu ul li a:hover {
+   color: #ff6600; /* Text color on hover */
+}
+
+/* Style the menu button for small screens */
+#menu-btn {
+   font-size: 2.5rem;
+   color: #333;
+   cursor: pointer;
+}
+
+.menu.active {
+   display: block;
+   background-color: #1a1a1a; /* Dark background for small screen menu */
+   position: absolute;
+   top: 80px;
+   left: 0;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   width: 100%;
+   text-align: left; /* Align text to the left for small screen menu */
+   z-index: 100;
+   padding: 10px 0;
+}
+
+.menu.active ul li {
+   margin: 1rem 0;
+}
+
+.menu.active ul li a {
+   padding: 1rem 0;
+   font-size: 1.8rem;
+   color: #f40606; /* Text color for small screen menu items */
+   text-decoration: none;
+   display: block;
+   transition: color 0.3s ease;
+}
+
+.menu.active ul li a:hover {
+   color: #ff6600; /* Text color on hover for small screen menu items */
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+   .navbar {
+       /* Remove flex-direction: column; to keep elements in one line */
+   }
+
+   .navbar .logo {
+       margin-bottom: 0; /* Remove margin-bottom to keep logo aligned */
+   }
+
+   .navbar ul {
+       /* flex-direction: column; */ /* Remove flex-direction to keep elements in one line */
+       text-align: center;
+       /* margin-top: 1rem; */ /* Remove margin-top */
+   }
+
+   .navbar ul li {
+       margin: 0 10px; /* Adjust margin as needed to space elements */
+   }
+
+   .navbar ul li a {
+       font-size: 1.8rem;
+       padding: 1rem 0;
+   }
+
+   .menu-btn {
+       display: block;
+       position: absolute;
+       top: 20px;
+       right: 20px;
+       cursor: pointer;
+   }
+
+   .menu-btn .bar {
+       width: 25px;
+       height: 3px;
+       background-color: #fff; /* White color for menu button bars */
+       margin: 4px 0;
+       transition: 0.4s;
+   }
+
+   .menu {
+       display: none;
+       width: 100%;
+       text-align: center;
+       background-color: #1a1a1a; /* Dark background for mobile menu */
+       position: absolute;
+       top: 80px;
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
+
+   .menu.active {
+       display: block;
+   }
+
+   .menu.active .menu-btn .bar:nth-child(1) {
+       transform: translateY(6px) rotate(45deg);
+   }
+
+   .menu.active .menu-btn .bar:nth-child(2) {
+       opacity: 0;
+   }
+
+   .menu.active .menu-btn .bar:nth-child(3) {
+       transform: translateY(-6px) rotate(-45deg);
+   }
+}
+
+
+
+.hero-section {
+   background: url('../images/homebanner.png') no-repeat;
+   background-size: cover;
+   background-position: right center;
+   min-height: 100vh;
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   padding: 120px 5% 60px; /* Top padding increased */
+   box-sizing: border-box;
+}
+
+.hero-content {
+   max-width: 600px;
+   background-color: rgba(255, 255, 255, 0.95);
+   padding: 50px;
+   border-radius: 16px;
+   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.hero-content h1 {
+   font-size: 42px;
+   color: #1a1a1a;
+   margin-bottom: 20px;
+   line-height: 1.3;
+}
+
+.hero-content p {
+   font-size: 18px;
+   color: #444;
+   margin-bottom: 32px;
+   line-height: 1.7;
+}
+
+.hero-btn {
+   display: inline-block;
+   padding: 14px 32px;
+   background-color: #1f1f1f;
+   color: #fff;
+   border-radius: 6px;
+   font-size: 16px;
+   text-decoration: none;
+   font-weight: 500;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.hero-btn:hover {
+   background-color: #333;
+   transform: translateY(-2px);
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+   .hero-content {
+      padding: 30px;
+   }
+
+   .hero-content h1 {
+      font-size: 32px;
+   }
+
+   .hero-btn {
+      padding: 12px 24px;
+      font-size: 15px;
+   }
+}
+
+
+
+/* Stylish services section */
+.services {
+   margin-top: 60px;
+   padding: 4rem 0;
+   background-color: #f7f7f7;
+   text-align: center;
+   border-radius: 10px;
+}
+
+/* Heading style */
+.services .heading {
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+   color: #333;
+   text-transform: uppercase;
+}
+
+/* Container for service boxes */
+.services .box-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 2rem;
+   margin-top: 2rem;
+}
+
+/* Service box style */
+.services .box {
+   background-color: #fff;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   padding: 2rem;
+   border-radius: 10px;
+   text-align: center;
+   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   width: calc(33.3333% - 2rem); /* Adjusted width for 3 columns */
+   max-width: 300px;
+}
+
+/* Hover effect for service boxes */
+.services .box:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Service image style */
+.services .box img {
+   margin: 1rem auto;
+   height: 100px;
+   object-fit: cover;
+   border-radius: 50%;
+   background-color: #fff;
+   padding: 10px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Service title style */
+.services .box h3 {
+   font-size: 1.8rem;
+   color: #333;
+   margin: 1rem 0;
+   text-transform: capitalize;
+}
+
+/* Service description style */
+.services .box p {
+   font-size: 1.4rem;
+   color: #777;
+   line-height: 1.6;
+   margin-bottom: 1rem;
+}
+
+/* Stylish hover effect for service images */
+.services .box img:hover {
+   transform: scale(1.1);
+}
+
+
+
+/* Style for the box-container */
+.listings .box-container {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 2rem;
+   justify-content: center;
+}
+
+/* Style for each box (property listing) */
+.listings .box-container form {
+   background-color: #f8f8f8;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   padding: 1.5rem;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   position: relative;
+   overflow: hidden;
+}
+
+/* Hover effect for the box */
+.listings .box-container form:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for property thumbnail */
+.listings .box .thumb {
+   height: 200px;
+   position: relative;
+   margin: 1rem 0;
+   overflow: hidden;
+   border-radius: 10px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   transition: transform 0.3s ease-in-out;
+}
+
+.listings .box .thumb img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   border-radius: 10px;
+   transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for property thumbnail */
+.listings .box .thumb:hover img {
+   transform: scale(1.05);
+}
+
+/* Style for property labels */
+.listings .box .labels {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   font-size: 1.2rem;
+   color: #888;
+   margin-bottom: 0.5rem;
+}
+
+.listings .box .label {
+   padding: 0.2rem 0.6rem;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   background-color: #f0f0f0;
+   color: #555;
+   text-transform: uppercase;
+}
+
+/* Style for property price */
+.listings .box .price {
+   font-size: 2rem;
+   color: #e74c3c;
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+}
+
+/* Style for property name */
+.listings .box h3.name {
+   font-size: 1.8rem;
+   color: #333;
+   margin: 0.5rem 0;
+   line-height: 1.3;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   text-transform: capitalize;
+}
+
+/* Style for property location */
+.listings .box .location {
+   font-size: 1.2rem;
+   color: #888;
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+}
+
+/* Style for buttons container */
+.listings .box form {
+   margin-top: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 1.5rem;
+   flex-wrap: wrap;
+}
+
+/* Style for buttons */
+.listings .box form .btn-container {
+   display: flex;
+   gap: 1rem;
+   flex: 1;
+}
+
+.listings .box form .btn {
+   text-decoration: none;
+   padding: 0.5rem 1rem;
+   background-color: #3498db;
+   color: #fff;
+   border-radius: 5px;
+   transition: background-color 0.3s ease-in-out;
+   cursor: pointer;
+   text-align: center;
+   border: none;
+   font-size: 1.2rem;
+   text-transform: uppercase;
+}
+
+.listings .box form .btn:hover {
+   background-color: #2980b9;
+}
+
+.listings .box form .delete-btn {
+   text-decoration: none;
+   padding: 0.5rem 1rem;
+   background-color: #e74c3c;
+   color: #fff;
+   border-radius: 5px;
+   transition: background-color 0.3s ease-in-out;
+   cursor: pointer;
+   text-align: center;
+   border: none;
+   font-size: 1.2rem;
+   text-transform: uppercase;
+}
+
+.listings .box form .delete-btn:hover {
+   background-color: #c0392b;
+}
+
+
+
+
+
+
+
+
+
+
+.box .flex {
+   font-size: 15px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr); /* 2-column layout */
+   gap: 1.5rem;
+   justify-content: center;
+}
+
+.view-property .details{
+   background-color: var(--white);
+   box-shadow: var(--box-shodow);
+   padding: 2rem;
+   overflow-x: hidden;
+}
+
+.view-property .details .thumb{
+   background-color: var(--black);
+   padding: 1.5rem;
+   margin-bottom: 1.5rem;
+}
+
+/* .view-property .details .thumb .big-image img{
+   height: 40rem;
+   width: 100%;
+   object-fit: contain;
+}
+
+.view-property .details .thumb .small-images{
+   display: flex;
+   justify-content: center;
+   gap: 1.5rem;
+   padding-top: 1rem;
+   flex-wrap: wrap;
+}
+
+.view-property .details .thumb .small-images img{
+   height: 7rem;
+   width: 10rem;
+   object-fit: cover;
+   cursor: pointer;
+   transition: .2s linear;
+}
+
+.view-property .details .thumb .small-images img:hover{
+   transform: scale(1.1);
+} */
+
+.view-property .details .images-container{
+   padding-bottom: 3rem;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+   bottom: 0;
+}
+
+.swiper-pagination-bullet{
+   background-color: var(--black);
+}
+
+.swiper-pagination-bullet-active{
+   background-color: var(--main-color);
+}
+
+.view-property .details .images-container img{
+   height: 40rem;
+   object-fit: cover;
+   width: 60rem;
+}
+
+.view-property .details .name{
+   font-size: 2rem;
+   text-overflow: ellipsis;
+   overflow-x: hidden;
+   margin-bottom: .5rem;
+   padding-top: 2rem;
+}
+
+.view-property .details .location{
+   padding-top: 1rem;
+   font-size: 1.6rem;
+   color: var(--light-color);
+}
+
+.view-property .details .location i{
+   margin-right: 1rem;
+   color: var(--main-color);
+}
+
+.view-property .details .info{
+   display: flex;
+   background-color: var(--light-bg);
+   padding: 1.5rem;
+   margin: 1.5rem 0;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 2rem;
+}
+
+.view-property .details .info p{
+   font-size: 1.7rem;
+}
+
+.view-property .details .info p span,
+.view-property .details .info p a{
+   color: var(--light-color);
+}
+
+.view-property .details .info p a:hover{
+   text-decoration: underline;
+}
+
+.view-property .details .info p i{
+   margin-right: 1.5rem;
+   color: var(--main-color);
+}
+
+.view-property .details .title{
+   font-size: 2rem;
+   color: var(--black);
+   padding-bottom: 1.5rem;
+   border-bottom: var(--border);
+}
+
+.view-property .details .flex{
+   margin: 1.5rem 0;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.view-property .details .flex .box{
+   flex: 1 1 40rem;
+}
+
+.view-property .details .flex .box p{
+   padding: .5rem 0;
+   font-size: 1.6rem;
+   color: var(--light-color);
+}
+
+.view-property .details .flex .box i{
+   color: var(--main-color);
+   margin-right: 1.5rem;
+}
+
+.view-property .details .description{
+   padding-top: 1rem;
+   margin: .5rem 0;
+   margin-top: .5rem;
+   font-size: 1.6rem;
+   color: var(--light-color);
+   line-height: 2;
+}
+
+.view-property .details .save{
+   width: 100%;
+   background-color: var(--light-bg);
+   cursor: pointer;
+   padding: 1rem 3rem;
+   font-size: 1.8rem;
+   color: var(--light-color);
+}
+
+.view-property .details .save:hover{
+   background-color: var(--main-color);
+   color: var(--white);
+}
+
+.view-property .details .save i{
+   margin-right: 1rem;
+   color: var(--black);
+}
+
+.view-property .details .save:hover i{
+   color: var(--white);
+}
+
+.about .row{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   align-items: center;
+}
+
+.about .row .image{
+   flex: 1 1 40rem;
+}
+
+.about .row .image img{
+   width: 100%;
+}
+
+.about .row .content{
+   flex: 1 1 40rem;
+   text-align: center;
+}
+
+.about .row .content h3{
+   font-size: 2.5rem;
+   color: var(--black);
+   margin-bottom: .5rem;
+   text-transform: capitalize;
+}
+
+.about .row .content p{
+   line-height: 2;
+   padding: 1rem 0;
+   font-size: 1.7rem;
+   color: var(--light-color);
+}
+
+.steps .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 30rem);
+   gap: 2rem;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.steps .box-container .box{
+   background-color: var(--white);
+   padding: 2rem;
+   text-align: center;
+   box-shadow: var(--box-shodow);
+}
+
+.steps .box-container .box img{
+   height: 7rem;
+   margin: .5rem 0;
+}
+
+.steps .box-container .box h3{
+   padding: 1rem 0;
+   font-size: 2rem;
+   text-transform: capitalize;
+   color: var(--black);
+}
+
+.steps .box-container .box p{
+   line-height: 2;
+   font-size: 1.6rem;
+   color: var(--light-color);
+}
+
+.reviews .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   gap: 2rem;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.reviews .box-container .box{
+   background-color: var(--white);
+   padding: 2rem;
+   box-shadow: var(--box-shodow);
+}
+
+.reviews .box-container .box .user{
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   margin-bottom: 1rem;
+}
+
+.reviews .box-container .box .user img{
+   height: 6rem;
+   width: 6rem;
+   border-radius: 50%;
+}
+
+.reviews .box-container .box .user h3{
+   font-size: 2rem;
+   color: var(--black);
+   padding-bottom: .3rem;
+}
+
+.reviews .box-container .box .user .stars i{
+   font-size: 1.5rem;
+   color: var(--main-color);
+}
+
+.reviews .box-container .box p{
+   line-height: 2;
+   padding-top: .5rem;
+   font-size: 1.6rem;
+   color: var(--light-color);
+}
+
+.contact .row{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   align-items: center;
+}
+
+.contact .row .image{
+   flex: 1 1 50rem;
+}
+
+.contact .row .image img{
+   width: 100%;
+}
+
+.contact .row form{
+   flex: 1 1 30rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shodow);
+   padding: 2rem;
+}
+
+.contact .row form h3{
+   padding-bottom: 1rem;
+   font-size: 2.5rem;
+   color: var(--black);
+   text-align: center;
+   text-transform: capitalize;
+}
+
+.contact .row form .box{
+   width: 100%;
+   border: var(--border);
+   padding: 1.4rem;
+   color: var(--black);
+   font-size: 1.8rem;
+   margin: 1rem 0;
+}
+
+.contact .row form textarea{
+   height: 15rem;
+   resize: none;
+}
+
+.faq .box-container{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   align-items: flex-start;
+}
+
+.faq .box-container .box{
+   flex: 1 1 40rem;
+   box-shadow: var(--box-shodow);
+}
+
+.faq .box-container .box h3{
+   padding: 1.5rem 2rem;
+   font-size: 2rem;
+   background-color: var(--black);
+   color: var(--white);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1rem;
+   cursor: pointer;
+}
+
+.faq .box-container .box p{
+   font-size: 1.6rem;
+   color: var(--light-color);
+   background-color: var(--white);
+   padding: 1.5rem 2rem;
+   line-height: 1.5;
+   display: none;
+}
+
+.faq .box-container .box.active p{
+   display: block;
+}
+
+.faq .box-container .box.active h3{
+   background-color: var(--main-color);
+}
+
+.filters form{
+   background-color: var(--white);
+   box-shadow: var(--box-shodow);
+   padding: 2rem;
+}
+
+.filters form #close-filter{
+   text-align: right;
+   padding-bottom: 2rem;
+   display: none;
+}
+
+.filters form #close-filter i{
+   height: 4.5rem;
+   width: 4.5rem;
+   line-height: 4.4rem;
+   background-color: var(--main-color);
+   color: var(--white);
+   cursor: pointer;
+   font-size: 2rem;
+   text-align: center;
+}
+
+.filters form #close-filter i:hover{
+   background-color: var(--black);
+}
+
+.filters form h3{
+   font-size: 2.5rem;
+   padding-bottom: 2rem;
+   color: var(--black);
+   text-transform: capitalize;
+   text-align: center;
+}
+
+.filters form .flex{
+   display: flex;
+   gap: 1rem;
+   flex-wrap: wrap;
+}
+
+.filters form .flex .box{
+   flex: 1 1 40rem;
+}
+
+.filters form .flex .box .input{
+   width: 100%;
+   margin: 1rem 0;
+   font-size: 1.8rem;
+   color: var(--black);
+   border: var(--border);
+   padding: 1.4rem;
+}
+
+.filters form .flex .box p{
+   font-size: 1.6rem;
+   color: var(--light-color);
+}
+
+#filter-btn{
+   position: fixed;
+   bottom: 1rem; right: 1rem;
+   background-color: var(--border);
+   color: var(--white);
+   text-align: center;
+   height: 4.5rem;
+   width: 4.5rem;
+   line-height: 4.4rem;
+   z-index: 1000;
+   font-size: 2rem;
+   background-color: var(--main-color);
+   display: none;
+}
+
+.form-container form{
+   max-width: 50rem;
+   margin: 0 auto;
+   background-color: var(--white);
+   box-shadow: var(--box-shodow);
+   padding: 2rem;
+   text-align: center;
+}
+
+.form-container form h3{
+   padding-bottom: 1rem;
+   font-size: 2.5rem;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.form-container form .box{
+   border: var(--border);
+   padding: 1.4rem;
+   color: var(--black);
+   margin: 1rem 0;
+   width: 100%;
+   font-size: 1.8rem;
+}
+
+.form-container form p{
+   font-size: 1.7rem;
+   padding: 1rem 0;
+   color: var(--light-color);
+}
+
+.form-container form p a{
+   color: var(--main-color);
+}
+
+.form-container form p a:hover{
+   text-decoration: underline;
+}
+
+.dashboard .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   gap: 1.5rem;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.dashboard .box-container .box{
+   background-color: var(--white);
+   box-shadow: var(--box-shodow);
+   padding: 2rem;
+   text-align: center;
+   overflow-x: hidden;
+}
+
+.dashboard .box-container .box h3{
+   font-size: 2.5rem;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.dashboard .box-container .box p{
+   margin: 1.5rem 0;
+   font-size: 1.6rem;
+   background-color: var(--light-bg);
+   padding: 1.5rem;
+   color: var(--light-color);
+   overflow-x: hidden;
+   text-overflow: ellipsis;
+}
+
+.property-form form{
+   background-color: var(--white);
+   padding: 2rem;
+   box-shadow: var(--box-shodow);
+}
+
+.property-form form h3{
+   font-size: 3rem;
+   text-align: center;
+   padding-bottom: 1rem;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.property-form form .flex{
+   display: flex;
+   flex-wrap: wrap;
+   column-gap: 1.5rem;
+   justify-content: space-between;
+   align-items: flex-end;
+}
+
+.property-form form .box{
+   flex: 1 1 40rem;
+}
+
+.property-form form .box .input{
+   width: 100%;
+   border: var(--border);
+   margin: 1rem 0;
+   padding: 1.4rem;
+   color: var(--black);
+   font-size: 1.8rem;
+}
+
+.property-form form textarea{
+   height: 20rem;
+   resize: none;
+}
+
+.property-form form .box .input option[selected]{
+   background-color: var(--black);
+   color: var(--white);
+}
+
+.property-form form .box .image{
+   height: 30rem;
+   width: 100%;
+   object-fit: contain;
+   padding-top: 1rem;
+   object-position: left;
+}
+
+.property-form form .box p{
+   font-size: 1.6rem;
+   color: var(--light-color);
+   padding-top: 1rem;
+}
+
+.property-form form .box p span{
+   color: var(--main-color);
+}
+
+.property-form form .checkbox{
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 1rem;
+   margin: .5rem 0;
+   flex-wrap: wrap;
+}
+
+.property-form form .checkbox .box{
+   flex: 1 1 20rem;
+}
+
+.property-form form .checkbox .box input{
+   margin-right: 1rem;
+   cursor: pointer;
+}
+
+.my-listings .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   gap: 2rem;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.my-listings .box-container .box{
+   background-color: var(--white);
+   box-shadow: var(--box-shodow);
+   padding: 2rem;
+   overflow-x: hidden;
+}
+
+.my-listings .box-container .box .thumb{
+   position: relative;
+   height: 20rem;
+   margin-bottom: 1.5rem;
+}
+
+.my-listings .box-container .box .thumb img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+
+.my-listings .box-container .box .thumb p{
+   position: absolute;
+   top: 1rem; left: 1rem;
+   background-color: rgba(0,0,0,.3);
+   color: var(--white);
+   padding:.5rem 1rem;
+   font-size: 1.7rem;
+}
+
+.my-listings .box-container .box .thumb p i{
+   margin-right: .7rem;
+}
+
+.my-listings .box-container .box .price{
+   font-size: 2rem;
+   color: var(--main-color);
+}
+
+.my-listings .box-container .box .price i{
+   margin-right: 1rem;
+}
+
+.my-listings .box-container .box .name{
+   font-size: 2rem;
+   color: var(--black);
+   line-height: 1.5;
+   padding: .5rem 0;
+   text-overflow: ellipsis;
+}
+
+.my-listings .box-container .box .location{
+   padding-bottom: .5rem;
+   font-size: 1.7rem;
+   color: var(--light-color);
+}
+
+.my-listings .box-container .box .location i{
+   margin-right: 1rem;
+   color: var(--main-color);
+}
+
+.requests .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   gap: 1.5rem;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.requests .box-container .box{
+   background-color: var(--white);
+   padding: 2rem;
+   padding-top: 1rem;
+   box-shadow: var(--box-shodow);
+}
+
+.requests .box-container .box p{
+   padding: .5rem 0;
+   line-height: 1.5;
+   font-size: 1.8rem;
+   color: var(--black);
+}
+
+.requests .box-container .box p span,
+.requests .box-container .box p a{
+   color: var(--light-color);
+}
+
+.requests .box-container .box p a:hover{
+   color: var(--main-color);
+   text-decoration: underline;
+}
+
+/* Enhanced Post Property section CSS */
+
+.enhancedPageComponent {
+   background-color: #ffffff;
+   padding: 40px;
+   border-radius: 16px;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   max-width: 1200px;
+   margin: 50px auto;
+   display: flex;
+   flex-direction: row;
+}
+
+.propertyImageContainer {
+   flex: 1;
+   position: relative;
+   overflow: hidden;
+   border-radius: 16px;
+}
+
+.propertyImage {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+}
+
+.propertyDetails {
+   flex: 1;
+   padding: 0px;
+   text-align: left;
+   margin-top: 180px;
+   padding-left: 190px;
+}
+
+.propertyHeading {
+   font-size: 32px;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+
+.propertySubDescription {
+   font-size: 18px;
+   color: #555555;
+   margin-bottom: 30px;
+}
+
+.postPropertyButton {
+   background-color: #007bff;
+   color: white;
+   padding: 16px 32px;
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+   font-size: 20px;
+   transition: background-color 0.3s, box-shadow 0.3s;
+
+}
+
+.postPropertyButton:hover {
+   background-color: #0056b3;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+/* CSS */
+.footer {
+   background-color: #252525;
+   color: #ffffff;
+   padding: 4rem 0;
+}
+
+.footer .flex {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 4rem;
+}
+
+.footer .box {
+   flex: 1 1 30%;
+}
+
+.footer .box h3 {
+   font-size: 2rem;
+   margin-bottom: 1.5rem;
+}
+
+.footer .box .contact-item, .footer .box ul {
+   margin-bottom: 1.5rem;
+}
+
+.footer .box a {
+   color: #ffffff;
+   text-decoration: none;
+   transition: color 0.3s;
+}
+
+.footer .box a:hover {
+   color: #ff9800;
+}
+
+.footer .box i {
+   font-size: 1.8rem;
+   margin-right: 0.5rem;
+   color: #ff9800;
+}
+
+.footer .box ul {
+   list-style: none;
+   padding: 0;
+}
+
+.footer .box ul li {
+   margin-bottom: 0.5rem;
+}
+
+.footer .box .social-icons a {
+   display: inline-block;
+   font-size: 2rem;
+   margin-right: 1rem;
+   color: #ffffff;
+   transition: color 0.3s, transform 0.3s;
+}
+
+.footer .box .social-icons a:hover {
+   color: #ff9800;
+   transform: scale(1.1);
+}
+
+.footer .credit {
+   text-align: center;
+   padding: 2rem 0;
+   font-size: 1.5rem;
+   border-top: 1px solid #383838;
+   line-height: 1.6;
+}
+
+.footer .credit i {
+   color: #ff9800;
+   margin: 0 0.2rem;
+}
+
+.footer .credit a {
+   color: #ff9800;
+   text-decoration: none;
+   transition: color 0.3s;
+}
+
+.footer .credit a:hover {
+   color: #ffffff;
+}
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px){
+
+   #menu-btn{
+      display: inline-block;
+   }
+
+   .header .navbar .menu{
+      position: absolute;
+      top: 99%; left: 0; right: 0;
+      background-color: var(--white);
+      border-top: var(--border);
+      transition: .2s linear;
+      z-index:1;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   .header .navbar .menu.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .navbar .menu ul li{
+      width: 100%;
+      position: relative;
+   }
+
+   .header .navbar .menu ul li a{
+      width: 100%;
+   }
+
+   .header .navbar .menu ul li ul{
+      position: relative;
+      width: 100%;
+   }
+
+   .header .navbar .menu ul li ul li a{
+      padding-left: 4rem;
+      background-color: var(--black);
+      color: var(--white);
+   }
+
+   .view-property .details .thumb .big-image img{
+      height: auto;
+   }
+
+   .view-property .details .thumb .small-images img{
+      height: 4rem;
+      width: 6rem;
+   }
+
+   #filter-btn{
+      display: inline-block;
+   }
+
+   .filters{
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      overflow-y: scroll;
+      background-color: var(--white);
+      z-index: 1100;
+      padding: 0;
+      display: none;
+   }
+
+   .filters.active{
+      display: block;
+   }
+
+   .filters form{
+      box-shadow: none;
+   }
+
+   .filters form #close-filter{
+      display: block;
+   }
+
+   .view-property .details .images-container img{
+      height: 30rem;
+      width: 40rem;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .header .navbar .flex .logo{
+      font-size: 1.8rem;
+   }
+
+   .home .center form .flex{
+      gap: 0;
+   }
+
+   .listings .box-container{
+      grid-template-columns: 1fr;
+   }
+
+   .reviews .box-container{
+      grid-template-columns: 1fr;
+   }
+
+   .dashboard .box-container{
+      grid-template-columns: 1fr;
+   }
+
+   .flex-btn{
+      flex-flow: column;
+      gap: 0;
+   }
+
+   .property-form form .box .image{
+      height: auto;
+   }
+
+   .view-property .details .images-container img{
+      height: 20rem;
+      width: 30rem;
+   }
+
+   .listings .box-container form .box .thumb{
+      height: 20rem;
+   }
+
+}
