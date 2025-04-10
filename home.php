@@ -35,41 +35,15 @@ include 'components/save_send.php';
 
 
 <!-- home section starts  -->
-<div class="home">
-   <section class="center">
-      <form action="search.php" method="post">
-         <h3>Find Your Perfect Home</h3>
-         <div class="flex">
-            <div class="box">
-               <p>Enter Location <span>*</span></p>
-               <input type="text" name="h_location" required maxlength="100" placeholder="Enter city name" class="input">
-            </div>
-            <div class="box">
-               <p>Property Type <span>*</span></p>
-               <select name="h_type" class="input" required>
-                  <option value="flat">Flat</option>
-                  <option value="house">House</option>
-                  <option value="shop">Shop</option>
-               </select>
-            </div>
-            <div class="box">
-               <p>Offer Type <span>*</span></p>
-               <select name="h_offer" class="input" required>
-                  <option value="sale">Sale</option>
-                  <option value="resale">Resale</option>
-                  <option value="rent">Rent</option>
-               </select>
-            </div>
-            <div class="box">
-               <p>Budget Range <span>*</span></p>
-               <input type="number" name="h_min" placeholder="Min" class="input" required>
-               <input type="number" name="h_max" placeholder="Max" class="input" required>
-            </div>
-         </div>
-         <input type="submit" value="Search Property" name="h_search" class="btn">
-      </form>
-   </section>
+<div class="hero-section">
+   <div class="hero-content">
+      <h1>Find Your Perfect Home</h1>
+      <p>Discover your dream property at the best deals—whether you're looking to buy, rent, or invest in a flat, house, or shop.</p>
+      <a href="search.php" class="hero-btn">Search Property</a>
+   </div>
 </div>
+
+
 
 <!-- home section ends -->
 
